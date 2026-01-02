@@ -9,7 +9,7 @@ app = FastAPI()
 def health_check():
 	return {"status": "ok"}
 
-@app.get("/callback")
+@app.get("/auth/callback")
 def auth_callback(code: str = None, state: str = None, error: str = None):
 	if error:
 		return {"ok": False, "error": error}
