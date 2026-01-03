@@ -1,13 +1,27 @@
 import MainContainer from "../components/MainContainer";
+import SideContainer from "../components/SideContainer";
+import "./Home.css";
 
 function Home() {
     return (
-        <div>
-            <h1>Welcome to the Playlist Generator</h1>
-            <MainContainer>
-                <h1>Create Playlist</h1>
-            </MainContainer>
-        </div>
+        <>
+            <h1 className="title">Wassup</h1>
+            <div className="screenContent">
+                <div className="left">
+                    <SideContainer>
+                    Left Side
+                    </SideContainer>
+                </div>
+                <MainContainer>
+                    <h1>Create Playlist</h1>
+                </MainContainer>
+                <div className="right">
+                    <SideContainer>
+                    Right Side
+                    </SideContainer>
+                </div>
+            </div>
+        </>
     );
 }
 
