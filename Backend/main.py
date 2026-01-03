@@ -13,14 +13,14 @@ def health_check():
 def auth_callback(code: str = None, state: str = None, error: str = None):
 	if error:
 		return {"ok": False, "error": error}
-	return {
-		"ok": True,
-		"code_received": code is not None,
-		"code": code
-	}
+	# Token exchange happens
+	return RedirectResponse(
+		url="http://127.0.0.1:5173/home",
+		status_code=302
+	)
 
 
-@app.get("/login")
+@app.get("/api/login")
 def login():
 	scope = "user-top-read playlist-modify-public playlist-modify-private"
 	params = {
