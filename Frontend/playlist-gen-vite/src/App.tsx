@@ -6,23 +6,21 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-      <div className="App">
-        <p className="title">Playlist Generator</p>
-        <div className="card">
-          <button onClick={() => window.location.href = '/api/login'}>
-            Log in with Spotify
-          </button>
+    <Routes>
+      <Route path="/" element={
+        <div className="App">
+          <p className="title">Playlist Generator</p>
+          <div className="card">
+            <button onClick={() => window.location.href = '/api/login'}>
+              Log in with Spotify
+            </button>
+          </div>
         </div>
-      </div>
-    </>
+      } />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
 }
 
