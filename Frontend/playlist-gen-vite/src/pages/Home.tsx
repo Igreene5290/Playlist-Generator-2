@@ -7,11 +7,6 @@ function Home() {
         <>
             <h1 className="title">Wassup</h1>
             <div className="screenContent">
-                <div className="left">
-                    <SideContainer>
-                    Left Side
-                    </SideContainer>
-                </div>
                 <MainContainer>
                     <h1>Create Playlist</h1>
                 </MainContainer>
